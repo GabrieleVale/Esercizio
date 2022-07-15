@@ -1,0 +1,52 @@
+table{
+    border: 1px solid #c0c0c0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #fff;
+}
+
+th {
+    color:rgb(43, 61, 74);
+    background-color: rgb(136, 148, 160);
+    padding: 5px;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    background-color: rgb(54, 91, 128);
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+}
+
+h2{
+    margin-right: 20px;
+}
+
+.log-out{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(90, 130, 171);
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.barra-secondaria{
+    background-color: rgb(167, 197, 236);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.aggiungi{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(116, 169, 218);
+    margin-top: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

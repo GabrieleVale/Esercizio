@@ -1,0 +1,36 @@
+<div>
+  <h1>Login</h1>
+  <div class="container">
+    <form name="loginForm" #f="ngForm" (ngSubmit)="signIn(f)">
+      <div >
+        <label for="email">Email</label>
+        <input required email type="text" ngModel #email="ngModel" name="email" id="email" placeholder="email" class="email">
+        <div *ngIf="email.dirty && email.touched && email.invalid" class="error" >
+          <div *ngIf="email.errors.required">
+            email richiesta!
+          </div>
+          <div *ngIf="email.errors.email">
+            richiesta email valida!
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input required minlength="5" type="password" ngModel #password="ngModel" name="password" id="password" placeholder="password" class="password">
+
+        <div *ngIf="password.dirty && password.touched && password.invalid" class="error" >
+          <div *ngIf="password.errors.required">
+            password richiesta!
+          </div>
+          <div *ngIf="password.errors.minlength" >
+            richiesta password lunga {{password.errors.minlength.requiredLength}} caratteri!
+          </div>
+        </div>
+      </div>
+      <div>
+        <input class="login"  [disabled]="!f.valid" type="submit" value="Log In">
+      </div>
+      
+    </form>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+<div>
+    
+    <div *ngIf="nascondi">
+        <div class="barra">
+            <h3>Ciao {{nome}}</h3>
+        </div>
+        
+        <div class="barra2">
+            <h4>Opzioni:</h4>
+            <div>
+                <input (click)="getSkill()" type="submit" value="Skill Assessment" class="funzioni">
+            </div>
+            <div>
+                <input (click)="dettagli()" type="submit" value="aggiungi esperienze e certificazioni" class="funzioni">
+            </div>
+            <div>
+                <input (click)="logOut()" type="submit" value="Log-Out" class="funzioni">
+            </div> 
+        </div>
+        
+        <div *ngIf="data_inizio">
+             <h5>esperienze lavorative:</h5>
+             <br>
+            <div>
+                nome azienda: {{nome_azienda}}
+            </div>   
+            <br>
+            <div>
+                dal:{{data_inizio}} al:{{data_fine}}
+            </div> 
+            <br>
+            <div>
+                ruolo: {{ruolo}}
+            </div> 
+            <br>  
+            <div>
+                descrizione: {{descrizione}}
+            </div>    
+        </div> 
+    </div>
+    
+    <div>
+        <div *ngIf="dati">
+            <h3>Esperienze tecniche:</h3>
+            <br>
+            <form #form="ngForm" (ngSubmit)="salva(form)">
+                <div>
+                    <h5>Data del corso o dell'attività</h5>
+                    <div>
+                        <h6>nome azienda</h6>
+                        <input type="text" name="nome" #nome="ngModel" ngModel>
+                    </div>
+
+                    <div class="container">
+                        <div>   
+                            dal<input type="date" name="data1" #data1="ngModel" ngModel>
+                        </div>
+                        
+                        <div class="posizione">   
+                            al<input type="date" name="data2" #data2="ngModel" ngModel>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div>
+                        <h6>ruolo</h6>
+                        <select ngModel #ruolo="ngModel">
+                            <option value="sviluppatore">sviluppatore</option>
+                            <option value="stagista">stagista</option>
+                            <option value="consulente">consulente</option> 
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <h5>descrizione esperienza tecnica</h5>
+                        <textarea cols="60" rows="15" ngModel #descrizione="ngModel" name="descrizione" ></textarea>
+                    </div>
+                    
+                    <input  type="submit" value="salva">
+                    <input type="button" type="reset" value="annulla" (click)="annulla()">
+                </div>
+            </form> 
+
+            <br><br>
+            
+            <h3>eventuali certificazioni corsi</h3>
+
+            <form #certificazione="ngForm">
+                <div>
+                    <h5>data scadenza certificazione</h5>
+                    <input type="date" name="data_fine" #data_fine="ngModel" ngModel>
+                </div>
+
+                <br>
+
+                <div>
+                    <h6>titolo</h6>
+                    <input type="text" name="titolo" #titolo="ngModel" ngModel>
+                </div>
+
+                <br>
+                <div>
+                    <h5>link del corso</h5>
+                    <input type="text" #link="ngModel" ngModel>
+                </div>
+                <br>
+
+                <div>
+                    <h5>note sul corso</h5>
+                    <textarea cols="40" rows="20" ngModel #note="ngModel" name="note" ></textarea>
+                </div>
+                <br>
+                
+
+                <div>
+                    <input type="submit" value="salva certificazione">
+                </div>
+            </form>
+        </div> 
+    </div>
+
+
+
+    <div>
+
+    </div>
+
+
+
+
+</div>
+
+
+

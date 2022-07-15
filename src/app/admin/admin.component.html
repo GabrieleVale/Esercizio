@@ -1,0 +1,34 @@
+
+<div class="flex-container">
+  <div>
+    <h2>Profilo amministratore!!</h2>
+  </div>
+  <div>
+    <input (click)="logout()" type="submit" value="Log-Out" class="log-out">
+  </div>
+</div>
+
+<div class="barra-secondaria">
+
+  <h4>Dipendenti registrati</h4>
+  
+  <div>
+    <table *ngIf="tabella_dipendenti">
+      <tr>
+        <th>nome</th>
+        <th>cognome</th>
+        <th>email</th>
+      </tr>
+      
+      <tr app-user *ngFor="let dipendente of dipendenti"  [user]="dipendente" (deleteDipendente)="deleteDipendente($event)">
+      </tr>
+      
+    </table>
+  </div>
+  <div>
+    <input (click)="aggiungi()" value="aggiungi dipendente" type="submit" class="aggiungi">
+  </div> 
+</div>
+
+
+

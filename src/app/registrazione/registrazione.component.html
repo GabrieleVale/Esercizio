@@ -1,0 +1,67 @@
+<div>
+  <h1>Registrazione</h1>
+  <div class="container">
+    <form name="loginForm" #f="ngForm" (ngSubmit)="signUp(f)">
+      
+      <div>
+        <label for="user">Name</label>
+        <input required type="text" ngModel #user="ngModel" name="user" id="user" placeholder="name" class="username">
+        <div *ngIf="user.dirty && user.touched && user.invalid" class="error" >
+          <div *ngIf="user.errors.required">
+            inserire nome dipendente!
+          </div> 
+        </div>
+      </div>
+      
+      <div>
+        <label for="surname">Surname</label>
+        <input required  type="text" ngModel #surname="ngModel" name="surname" id="surname" placeholder="surname" class="surname">
+        <div *ngIf="surname.dirty && surname.touched && surname.invalid" class="error" >
+          <div *ngIf="surname.errors.required">
+            inserire cognome dipendente!
+          </div> 
+          
+        </div>
+      </div>
+      
+      <div>
+        <label for="email">Email</label>
+        <input required email type="text" ngModel #email="ngModel" name="email" id="email" placeholder="email" class="email">
+        <div *ngIf="email.dirty && email.touched && email.invalid" class="error" >
+          <div *ngIf="email.errors.required">
+            email richiesta!
+          </div>
+          <div *ngIf="email.errors.email">
+            richiesta email valida!
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input required minlength="5" type="password" ngModel #password="ngModel" name="password" id="password" placeholder="password" class="password">
+        
+        <div *ngIf="password.dirty && password.touched && password.invalid" class="error" >
+          <div *ngIf="password.errors.required">
+            password richiesta!
+          </div>
+          <div *ngIf="password.errors.minlength" >
+            richiesta password lunga {{password.errors.minlength.requiredLength}} caratteri!
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-container">
+          amministratore:
+          <input type="radio" value="amministratore" name="registrazione" id="amministratore" ngModel #button="ngModel" (change)="bottone($event)" required>
+          dipendente:
+          <input type="radio" value="dipendente" name="registrazione" id="dipendente" ngModel #button="ngModel" (change)="bottone($event)" required>
+      </div>
+
+      <div class="posizione">
+        <input class="registra"  [disabled]="!f.valid" type="submit" value="signUp">
+        <input class="annulla"  type="submit" value="annulla" (click)="annulla()">
+      </div>
+      
+    </form>
+  </div>
+</div>

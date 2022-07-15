@@ -1,0 +1,74 @@
+
+.password, .email{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    display: grid;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+    height: 12px;
+    position: relative;
+    top: 40px;
+    left: 18px;
+    font-size: 18px;
+}
+
+label{
+    font-size: 22px;
+    position: relative;
+    top: 43px;
+    left: 18px;
+}
+
+
+.container{
+    background-color: rgb(93, 150, 240);
+    height: 300px;
+    width: 300px;
+    padding: 5px;
+    position: relative;
+    top: 100px;
+    left: 580px;
+    border-radius: 5px;
+}
+
+.login {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    position: relative;
+    top: 62px;
+    left: 105px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 22px;
+    color: black;
+}
+
+.color{
+    color: red;
+}
+
+.error{
+    position: relative;
+    top: 30px;
+    left: 18px;
+    color: #ba2911;
+}
+
+.login:disabled{
+    background-color: grey;
+}
+
+.login:enabled{
+    background-color: #4b4bda;
+}
+
+
+
+
+
+

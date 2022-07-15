@@ -1,0 +1,35 @@
+
+.container{
+    display: flex;
+}
+
+.posizione{
+    position: relative;
+    left: 8px;
+}
+
+.funzioni{
+    background-color: rgb(242, 176, 77);
+    border-radius: 5px;
+    height: 35px;
+    margin-left: 100px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+    right: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.barra{
+    background-color: rgb(54, 91, 128);
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.barra2{
+    background-color: rgb(152, 198, 212);
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

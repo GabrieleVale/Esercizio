@@ -1,0 +1,66 @@
+<div>
+  <h1>Skill assessment</h1>
+  
+  <table *ngFor="let categoria of categorie; let indiceCompetenza = index"> 
+    <div class="inizio"> 
+      <div class="flex-container">
+        <div>
+          <b style="width: 145px; display: inline-block; font-size: 20px;">{{categoria.categoria}}</b><br>
+        </div>
+        <div class="aggiungi" (click)="upDate(indiceCompetenza)">Aggiungi skill</div>
+        <app-skill *ngIf="appSkill && indice_controllo==indiceCompetenza" [indice]="indiceCompetenza" [skill]="appSkill" (evento)="nascondi($event)"></app-skill>
+      </div>
+      
+      <tr *ngFor="let skill of categoria.skills; let indiceSkill = index">
+        <td style="width: 195px; font-size: 19px;">{{skill}}</td>
+        <br><br>
+        <div class="radio">
+          <form #myForm="ngForm" (change)="onChange($event, skill , categoria, indiceCompetenza, indiceSkill, myForm)">
+            <td class="form">
+              <div class="skill">
+                <label for="nessuna">nessuna</label>
+                 <div>
+                  <input [ngModel]="conoscenze[indiceCompetenza]?.skills[indiceSkill]?.value" class="bottone" type="radio" id="nessuna" name="{{categoria.categoria}}" value="nessuna" #bottone="ngModel"  required>
+                </div>  
+              </div>
+              <div class="skill">
+                <label for="teorico">teorico/scolastico</label>
+                <div>
+                  <input class="bottone2" [ngModel]="conoscenze[indiceCompetenza]?.skills[indiceSkill]?.value"  #bottone="ngModel" checked="checked"  type="radio" id="teorico" name="{{categoria.categoria}}" value="teorico"  required>
+                </div> 
+              </div>
+              <div class="skill">
+                <label for="junior" class="skill_junior">junior</label>
+                <div>
+                  <input class="bottone3" [ngModel]="conoscenze[indiceCompetenza]?.skills[indiceSkill]?.value"  #bottone="ngModel"   type="radio" id="junior" name="{{categoria.categoria}}" value="junior"  required>
+                </div>  
+              </div>
+              <div class="skill">
+                  <label for="middle">middle</label>
+                <div>
+                  <input class="bottone4" [ngModel]="conoscenze[indiceCompetenza]?.skills[indiceSkill]?.value" #bottone="ngModel"   type="radio" id="middle" name="{{categoria.categoria}}" value="middle" required>
+                </div>
+              </div>
+              <div class="skill">
+                 <label for="senior">senior</label>
+                <div>
+                  <input class="bottone5" [ngModel]="conoscenze[indiceCompetenza]?.skills[indiceSkill]?.value" #bottone="ngModel"   type="radio" id="senior" name="{{categoria.categoria}}" value="senior"  required> 
+                </div>
+              </div>
+              <div>
+                <div><button class="posizione" (click)="onDelete(indiceSkill, indiceCompetenza)">Cancella skill</button></div>
+                <div> <button type="reset" class="posizione_reset">resetta</button></div>
+              </div>
+            </td>
+            <div *ngIf="bottone.invalid && controllo" class="controllo">modulo non compilato</div>
+            <input *ngIf="indiceCompetenza==3 && indiceSkill==2" type="submit" name="salva" value="salva" class="salva" (click)="salva()">
+          </form>  
+        </div>     
+      </tr>
+    </div>
+  </table>
+  <input type="submit" name="cancell" value="cancell" class="cancell" (click)="annulla()">
+</div>
+
+
+

@@ -1,0 +1,159 @@
+.form{
+    display: flex;
+    border: 1px solid;
+    width: 788px;
+    height: 131px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 56px;
+}
+
+.inizio{
+    margin-top: 85px;
+}
+
+.skill{
+    position: relative;
+    left: 34px;
+    font-size: 25px;
+    top: 36px;
+    margin-right: 67px;
+}
+
+.radio{
+    position: relative;
+    left: 12px;
+    font-size: 25px;
+    top: 30px;
+}
+
+.bottone{
+    position: relative;
+    left: 22px;
+}
+
+.bottone2{
+    position: relative;
+    left: 48px;
+}
+
+.bottone3{
+    position: relative;
+    right: 20px;
+}
+
+.bottone4{
+    position: relative;
+    left: 22px;
+}
+
+.bottone5{
+    position: relative;
+    left: 22px;
+}
+
+
+.skill_junior{
+    position: relative;
+    right:30px;
+}
+
+
+.posizione{
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    left: 21px;
+    top: 44px;
+    background-color: #e3854d;
+    height: 32px;
+    padding: 5px;
+    border-radius: 15px;
+    color: #040000;
+    margin-bottom: 3px;
+    width: 116px;
+}
+
+.posizione_reset{
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    left: 21px;
+    top: 44px;
+    background-color: #dfc353;
+    height: 32px;
+    padding: 5px;
+    border-radius: 15px;
+    color: black;
+}
+
+
+.posizione div:hover {
+    background-color: #BBD8DC;
+    color: white;
+}
+
+.posizione div:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+
+.aggiungi{
+    cursor: pointer;
+    position: relative;
+    margin-left: 65px;
+    background-color: #7070e6;
+    padding: 10px;
+    border-radius: 15px;
+    color: #2b2b57;
+    bottom: 5px;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.cancell{
+    position: relative;
+    width: 95px;
+    height: 42px;
+    background-color: #ff000075;
+    border-radius: 6px;
+    left: 442px;
+    top: 64px;
+    color: #580303;
+    font-size: 18px;
+}
+
+.salva{
+    position: relative;
+    width: 95px;
+    height: 42px;
+    background-color: #35952275;
+    border-radius: 6px;
+    left: 360px;
+    top: 80px;
+    color: #215d01;
+    font-size: 18px;
+}
+
+.controllo{
+    background-color: #a53e007d;
+    position: relative;
+    bottom: 56px;
+    padding: 3px;
+    border-radius: 10px;
+    color: #000;
+    box-shadow: 3px 3px #a4515187;
+}
+
+.posizione_bottone{
+    position: relative;
+    left: 62px;
+}
+
+
+

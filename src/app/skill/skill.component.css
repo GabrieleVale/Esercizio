@@ -1,0 +1,22 @@
+.flex-container{
+    display: flex;
+    margin-left: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.aggiungi{
+    cursor: pointer;
+    position: relative;
+    margin-left: 2px;
+    background-color: #8585d4;
+    padding: 10px;
+    border-radius: 15px;
+    color: #23234f;
+    height: 0px;
+}
+
+.parola{
+    position: relative;
+    bottom: 10px;
+}

@@ -1,0 +1,19 @@
+td {
+    padding: 5px;
+    border: 1px solid #fff;
+    background: rgb(191, 223, 239);
+    color: black;
+}
+
+button{
+    padding: 5px;
+    border: 1px solid #222;
+    width: 80px;
+    border-radius: 5px;  
+    cursor: pointer;
+}
+
+button.delete{
+    color: #fff;
+    background: rgb(183, 77, 77);
+}
